@@ -20,7 +20,7 @@ async function run() {
         }
       }
     )
-    core.info(repository);
+    core.info(JSON.stringify(repository, null, 2));
     core.setOutput('id', repository.id);
   } catch (error) {
     core.setFailed(error.message);
