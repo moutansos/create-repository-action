@@ -28,7 +28,7 @@ async function run() {
         }
       }
     )
-    core.info(JSON.stringify(repository, null, 2));
+    core.info('Repository created: ' + repository.html_url);
     core.setOutput('id', repository.id);
   } catch (error) {
     core.setFailed(error.message);
