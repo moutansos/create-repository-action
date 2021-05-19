@@ -1,18 +1,27 @@
 const core = require('@actions/core');
-const wait = require('./wait');
+const axios = require('axios');
 
-
-// most @actions toolkit packages have async methods
 async function run() {
   try {
-    const ms = core.getInput('milliseconds');
-    core.info(`Waiting ${ms} milliseconds ...`);
+    const name = core.getInput('name');
+    const org = core.getInput('org');
+    const accessToken = core.getInput('access-token');
 
-    core.debug((new Date()).toTimeString()); // debug is only output if you set the secret `ACTIONS_RUNNER_DEBUG` to true
-    await wait(parseInt(ms));
-    core.info((new Date()).toTimeString());
-
-    core.setOutput('time', new Date().toTimeString());
+    const endpoint = org ? `/orgs/${org}/repos` : '/user/repos'
+    const repository = await axios.post(
+      'https://api.github.com' + endpoint,
+      {
+        name,
+        private: false,
+      },
+      {
+        headers: {
+          Authorization: 'token ' + accessToken
+        }
+      }
+    )
+    core.info(repository);
+    core.setOutput('id', repository.id);
   } catch (error) {
     core.setFailed(error.message);
   }

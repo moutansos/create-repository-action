@@ -1,13 +1,19 @@
-name: 'Wait'
-description: 'Wait a designated number of milliseconds'
+name: 'Create Repository'
+description: 'Create a new repository from your workflows.'
 inputs:
-  milliseconds:  # id of input
-    description: 'number of milliseconds to wait'
+  name:
+    description: 'name of new repository'
     required: true
-    default: '1000'
+  org:
+    description: 'name of an organization'
+    required: false
+    default: null
+  access-token:
+    description: 'access token with repo scope'
+    required: true
 outputs:
-  time: # output will be available to future steps
-    description: 'The message to output'
+  repo-id:
+    description: 'GraphQL ID of newly created repository'
 runs:
   using: 'node12'
   main: 'dist/index.js'
