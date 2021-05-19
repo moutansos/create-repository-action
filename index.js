@@ -13,6 +13,7 @@ async function run() {
       {
         name,
         private: false,
+        auto_init: true
       },
       {
         headers: {
