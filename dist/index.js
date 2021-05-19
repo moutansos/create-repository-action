@@ -28,8 +28,8 @@ async function run() {
         }
       }
     )
-    core.info('Repository created: ' + repository.html_url);
-    core.setOutput('id', repository.id);
+    core.info('Repository created: ' + repository.data.html_url);
+    core.setOutput('id', repository.data.node_id);
   } catch (error) {
     core.setFailed(error.message);
   }
