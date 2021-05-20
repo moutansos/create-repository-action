@@ -7,9 +7,9 @@ Octobay uses this action as part of its CI/CD pipline to create temporary reposi
 ## Usage
 
 ```yaml
-uses: mktcode/create-repository-action@v1
+uses: octobay/create-repository-action@v1
 with:
   name: 'repository-name'
   org: 'org-name'
-  access-token: 'accessTokenWithRepoScope'
+  access-token: 'accessTokenWithRepoOrOrgAdminScope'
 ```
