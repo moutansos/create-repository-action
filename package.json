@@ -24,11 +24,11 @@
   },
   "homepage": "https://github.com/octobay/create-repository-action#readme",
   "dependencies": {
-    "@actions/core": "^1.2.7",
+    "@actions/core": "^1.3.0",
     "axios": "^0.21.1"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.28.5",
-    "eslint": "^7.26.0"
+    "@vercel/ncc": "^0.28.6",
+    "eslint": "^7.27.0"
   }
 }
