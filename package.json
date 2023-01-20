@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/octobay/create-repository-action#readme",
   "dependencies": {
-    "@actions/core": "^1.9.1",
+    "@actions/core": "^1.10.0",
     "axios": "^1.2.3"
   },
   "devDependencies": {
