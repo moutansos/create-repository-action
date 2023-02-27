@@ -1,6 +1,6 @@
 {
   "name": "create-repository-action",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a new repository from your workflows.",
   "main": "index.js",
   "scripts": {
@@ -29,6 +29,6 @@
   },
   "devDependencies": {
     "@vercel/ncc": "^0.36.1",
-    "eslint": "^8.34.0"
+    "eslint": "^8.35.0"
   }
 }

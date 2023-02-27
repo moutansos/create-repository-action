@@ -11,6 +11,14 @@ inputs:
   access-token:
     description: 'access token with repo scope'
     required: true
+  private-repo:
+    description: 'is this a private repository?'
+    required: false
+    default: false
+  initialize-repo:
+    description: 'initialized repo with empty README file'
+    required: false
+    default: true
 outputs:
   repo-id:
     description: 'GraphQL ID of newly created repository'

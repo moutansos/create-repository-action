@@ -12,4 +12,6 @@ with:
   name: 'repository-name'
   org: 'org-name'
   access-token: 'accessTokenWithRepoOrOrgAdminScope'
+  private-repo: true
+  initalize-repo: true
 ```
